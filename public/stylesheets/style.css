@@ -1,8 +1,26 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+button>a {
+  color: white;
+  text-decoration: none;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.container {
+  padding: 50px;
+}
+
+nav {
+  position: relative;
+}
+
+#logged {
+  position: relative;
+  margin: auto;
+  color: white;
 }

@@ -1,0 +1,41 @@
+<div class="container d-flex flex-column align-items-center">
+  <h2 class="mb-5">Register a new User</h2>
+  <form class="w-50" method="POST" action="/auth/signup">
+    <div class="form-group">
+      <label for="username">Username: </label>
+      <input 
+      <% if (typeof error !== "undefined") { %> value="<%= body.username
+      %>" <% } %> class="form-control" id="username" name="username" type="text"
+      placeholder="John Doe" required />
+    </div>
+    <div class="form-group">
+      <label for="email">Email: </label>
+      <input 
+      <% if (typeof error !== "undefined") { %> value="<%= body.email
+      %>" <% } %> class="form-control" id="email" name="email" type="email"
+      placeholder="johndoe@gmail.com" required />
+    </div>
+    <div class="form-group">
+      <label for="password">Password: </label>
+      <input
+        class="form-control"
+        id="password"
+        name="password"
+        type="password"
+        placeholder="******"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="pet">Favorite pet:</label>
+      <select class="form-control" name="pet" id="pet">
+        <option value="cat" selected>Cat</option>
+        <option value="dog">Dog</option>
+      </select>
+    </div>
+    <button type="submit" class="btn w-25 btn-dark mt-3">Signup!</button>
+  </form>
+  <% if (typeof error !== "undefined") { %>
+  <p><%= error %></p>
+  <% } %>
+</div>
